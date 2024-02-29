@@ -5,6 +5,12 @@ import javafx.scene.paint.Paint;
 import javafx.scene.shape.Rectangle;
 
 public class Piece {
+    public Piece(int size, int startPositionX, int startPositionY) {
+        this.startPositionX = startPositionX;
+        this.startPositionY = startPositionY;
+        rectangle = new Rectangle(startPositionX, startPositionY, size, size);
+        rectangle.setFill(Color.RED);
+    }
     private Rectangle rectangle;
     private int startPositionX;
     private int startPositionY;
@@ -33,10 +39,5 @@ public class Piece {
         this.startPositionY = startPositionY;
     }
 
-    public Piece(int size, int startPositionX, int startPositionY) {
-        this.startPositionX = startPositionX;
-        this.startPositionY = startPositionY;
-        rectangle = new Rectangle(startPositionX, startPositionY, size, size);
-        rectangle.setFill(Color.RED);
-    }
+
 }

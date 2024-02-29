@@ -6,8 +6,8 @@ import javafx.scene.shape.Rectangle;
 
 public class GridHandler extends GridBase {
 
-    Color backgroundColor1 = Color.WHITE;
-    Color backgroundColor2 = Color.BLACK;
+    Color backgroundColor1 = Color.ANTIQUEWHITE;
+    Color backgroundColor2 = Color.SANDYBROWN;
 
     public GridHandler(double planeWidth, double planeHeight, int gridSize, AnchorPane anchorPane) {
         super(planeWidth, planeHeight, gridSize, anchorPane);
