@@ -2,12 +2,9 @@ package com.chess.logik;
 
 public class Pawn extends Figure {
 
-    public Pawn(int fieldMoveSet, int startField, int currentField, char color) {
-        super(fieldMoveSet, startField, currentField, color);
+    public Pawn(int row, int column, char color) {
+        super(row,column, color);
     }
 
-    @Override
-    public void move(int pos) {
 
-    }
 }

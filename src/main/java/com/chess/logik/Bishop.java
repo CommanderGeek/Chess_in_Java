@@ -1,12 +1,9 @@
 package com.chess.logik;
 
 public class Bishop  extends  Figure{
-    public Bishop(int fieldMoveSet, int startField, int currentField, char color) {
-        super(fieldMoveSet, startField, currentField, color);
+    public Bishop(int row, int column, char color) {
+        super(row,column, color);
     }
 
-    @Override
-    public void move(int pos) {
 
-    }
 }

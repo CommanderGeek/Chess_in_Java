@@ -2,11 +2,8 @@ package com.chess.logik;
 
 public class King extends Figure{
 
-    public King(int fieldMoveSet, int startField, int currentField, char color) {
-        super(fieldMoveSet, startField, currentField, color);
+    public King(int row, int column, char color) {
+        super(row,column, color);
     }
-    @Override
-    public void move(int pos) {
 
-    }
 }

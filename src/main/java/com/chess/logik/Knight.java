@@ -1,12 +1,9 @@
 package com.chess.logik;
 
 public class Knight extends Figure{
-    public Knight(int fieldMoveSet, int startField, int currentField, char color) {
-        super(fieldMoveSet, startField, currentField, color);
+    public Knight(int row, int column, char color) {
+        super(row,column, color);
     }
 
-    @Override
-    public void move(int pos) {
 
-    }
 }

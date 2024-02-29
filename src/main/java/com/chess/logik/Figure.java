@@ -1,17 +1,13 @@
 package com.chess.logik;
 
-import javafx.scene.paint.Color;
-
 public abstract class Figure {
-    private int fieldMoveSet;
-    private int startField;
-    private int currentField;
+    private int row;
+    private int column;
     private char color;
 
-    public Figure(int fieldMoveSet, int startField, int currentField, char color) {
-        this.fieldMoveSet = fieldMoveSet;
-        this.startField = startField;
-        this.currentField = currentField;
+    public Figure(int row, int column, char color) {
+        this.row = row;
+        this.column = column;
         this.color = color;
     }
 
@@ -23,34 +19,22 @@ public abstract class Figure {
         this.color = color;
     }
 
-    public abstract void move(int pos);
 
-    public int getFieldMoveSet() {
-        return fieldMoveSet;
+
+
+    public int getRow() {
+        return row;
     }
 
-    public void setFieldMoveSet(int fieldMoveSet) {
-        this.fieldMoveSet = fieldMoveSet;
+    public void setRow(int row) {
+        this.row = row;
     }
 
-    public int getStartField() {
-        return startField;
+    public int getColumn() {
+        return column;
     }
 
-    public void setStartField(int startField) {
-        this.startField = startField;
-    }
-
-    public int getCurrentField() {
-        return currentField;
-    }
-
-    public void setCurrentField(int currentField) {
-        this.currentField = currentField;
-    }
-
-    public boolean take(Figure f){
-        //placeholder!!!!
-        return (f.color != color && f.currentField == currentField + fieldMoveSet);
+    public void setColumn(int column) {
+        this.column = column;
     }
 }

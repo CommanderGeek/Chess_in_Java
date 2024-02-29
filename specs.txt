@@ -1,0 +1,58 @@
+Spielregeln und Zugmöglichkeiten:
+
+1. Jeder Spieler hat 16 Figuren: einen König, eine Königin, zwei Türme, zwei Springer, zwei Läufer und acht Bauern.
+Die Figuren bewegen sich entsprechend den Schachregeln: Der König kann ein Feld in jede Richtung bewegt werden, die Königin diagonal, horizontal oder vertikal, die Türme horizontal oder vertikal, die Springer in einem L-förmigen Muster, die Läufer diagonal und die Bauern vorwärts (unter bestimmten Bedingungen auch diagonal).
+Der König darf nie im Schach stehen, d.h. er darf nicht auf ein Feld ziehen, das von einer gegnerischen Figur bedroht ist.
+Spielbrett und Benutzeroberfläche:
+
+2. Das Spielbrett besteht aus einem 8x8-Raster.
+Du kannst JavaFX verwenden, um das Spielbrett und die Figuren grafisch darzustellen.
+Die Benutzeroberfläche sollte es dem Spieler ermöglichen, Figuren auszuwählen und zu bewegen.
+Spiellogik und Validierung von Zügen:
+
+3. Implementiere die Spiellogik, um Züge zu validieren, d.h. sicherzustellen, dass ein Zug den Schachregeln entspricht.
+Überprüfe, ob der König nach einem Zug im Schach steht und blockiere ungültige Züge.
+Spielmodi:
+
+4. Beginne zunächst mit einem Einzelspieler-Modus, in dem der Spieler gegen eine vom Computer gesteuerte KI spielt.
+Implementiere später einen lokalen Koop-Modus, in dem zwei Spieler abwechselnd am selben Gerät spielen können.
+Speichern und Laden von Spielen:
+
+5. Implementiere Funktionen zum Speichern und Laden von Spielen, damit Spieler ihre Spiele fortsetzen können.
+Grafische Benutzeroberfläche (GUI):
+
+6. Entwerfe eine übersichtliche und benutzerfreundliche Benutzeroberfläche mit JavaFX.
+Integriere Funktionen wie Anzeige von Zugmöglichkeiten für ausgewählte Figuren, Anzeige von Spielstand und Spielende.
+Testen und Fehlerbehebung:
+
+7. Führe umfangreiche Tests durch, um sicherzustellen, dass das Spiel korrekt funktioniert und alle Spielregeln eingehalten werden.
+Behandle Fehlerfälle und implementiere Fehlerbehebung, um eine reibungslose Spielerfahrung zu gewährleisten.
+
+
+Zu den Figuren:
+
+König:
+Der König kann ein Feld in jede Richtung bewegt werden, solange es nicht von einer eigenen Figur besetzt ist und er nach dem Zug nicht im Schach steht.
+Der König kann sich auch kurze Distanzen bewegen, um zu rochieren, wenn bestimmte Bedingungen erfüllt sind.
+Nach einem Zug des Königs muss überprüft werden, ob er im Schach steht, d.h. ob er von einer gegnerischen Figur bedroht wird.
+
+Dame (Königin):
+Die Dame kann sich horizontal, vertikal und diagonal über das Spielbrett bewegen, solange keine eigenen Figuren sie blockieren.
+Sie darf sich nicht über andere Figuren hinwegbewegen.
+
+Turm:
+Der Turm kann sich horizontal und vertikal über das Spielbrett bewegen, solange keine eigenen Figuren ihn blockieren.
+Er darf sich nicht über andere Figuren hinwegbewegen.
+
+Springer:
+Der Springer bewegt sich in einem L-förmigen Muster: zwei Felder in eine Richtung und dann ein Feld senkrecht oder waagerecht dazu.
+Der Springer kann über andere Figuren hinwegspringen, d.h. er ist nicht durch eigene oder gegnerische Figuren blockiert.
+
+Läufer:
+Der Läufer kann sich diagonal über das Spielbrett bewegen, solange keine eigenen Figuren ihn blockieren.
+Er darf sich nicht über andere Figuren hinwegbewegen.
+
+Bauer:
+Der Bauer bewegt sich normalerweise ein Feld nach vorne, kann aber auch zu Beginn des Spiels zwei Felder nach vorne bewegen.
+Der Bauer schlägt diagonal vorwärts und erobert damit gegnerische Figuren.
+Es gibt spezielle Regeln für den Bauern, wie das "en passant"-Schlagen und die Umwandlung in eine andere Figur, wenn er die gegnerische Grundlinie erreicht.
