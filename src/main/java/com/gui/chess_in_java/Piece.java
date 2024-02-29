@@ -1,27 +1,34 @@
 package com.gui.chess_in_java;
 
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Rectangle;
 
+import java.io.InputStream;
+
 public class Piece {
-    public Piece(int size, int startPositionX, int startPositionY) {
+
+
+    public Piece(int size, int startPositionX, int startPositionY, String url) {
         this.startPositionX = startPositionX;
         this.startPositionY = startPositionY;
-        rectangle = new Rectangle(startPositionX, startPositionY, size, size);
-        rectangle.setFill(Color.RED);
+        //rectangle = new Rectangle(startPositionX, startPositionY, size, size);
+        //rectangle.setFill(Color.RED);
+        InputStream imgStream = ChessApplication.class.getResourceAsStream(url);
+        assert imgStream != null;
+        Image im = new Image(imgStream);
+        img = new ImageView(im);
+        img.setX(startPositionX);
+        img.setY(startPositionY);
     }
-    private Rectangle rectangle;
+
     private int startPositionX;
     private int startPositionY;
 
-    public Rectangle getRectangle() {
-        return rectangle;
-    }
+    private ImageView img;
 
-    public void setRectangle(Rectangle rectangle) {
-        this.rectangle = rectangle;
-    }
 
     public int getStartPositionX() {
         return startPositionX;
@@ -39,5 +46,11 @@ public class Piece {
         this.startPositionY = startPositionY;
     }
 
+    public ImageView getImg() {
+        return img;
+    }
 
+    public void setImg(ImageView img) {
+        this.img = img;
+    }
 }

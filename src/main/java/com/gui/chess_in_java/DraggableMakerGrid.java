@@ -26,7 +26,7 @@ public class DraggableMakerGrid extends GridBase {
     }
 
     public void makeDraggable(Piece piece){
-        Node node = piece.getRectangle();
+        Node node = piece.getImg();
         node.setOnMouseDragged(mouseEvent -> {
             mouseAnchorX = mouseEvent.getSceneX();
             mouseAnchorY = mouseEvent.getSceneY();
@@ -34,12 +34,10 @@ public class DraggableMakerGrid extends GridBase {
             double maxY = getAnchorPane().getPrefHeight();
             int x = (int) ((mouseAnchorX/getGridSize())) * getGridSize();
             int y = (int) ((mouseAnchorY/getGridSize())) * getGridSize();
-            int newX = x - piece.getStartPositionX();
-            int newY = y - piece.getStartPositionY();
-            if(newX >= 0 && newX < maxX) {
+            if(mouseAnchorX >= 0 && mouseAnchorX < maxX) {
                 node.setLayoutX(x - piece.getStartPositionX());
             }
-            if(newY >= 0 && newY < maxY) {
+            if(mouseAnchorY >= 0 && mouseAnchorY < maxY) {
                 node.setLayoutY(y - piece.getStartPositionY());
             }
         });
