@@ -39,13 +39,38 @@ public class Gamehandler {
         board.setFigure(new Rook(7,0, 'w'), 7,0);
         board.setFigure(new Knight(7,1, 'w'), 7,1);
         board.setFigure(new Bishop(7,2,'w'),7,2);
-        board.setFigure(new Queen(7,3, 'w'), 7,3);
-        board.setFigure(new King(7,4,'w'), 7,4);
+        board.setFigure(new King(7,3,'w'), 7,4);
+        board.setFigure(new Queen(7,4, 'w'), 7,3);
         board.setFigure(new Bishop(7,5,'w'),7,5);
         board.setFigure(new Knight(7,6, 'w'), 7,6);
         board.setFigure(new Rook(7,7, 'w'), 7,7);
    }
 
+   public void updateField(){
+        for(int i=0; i < board.board.length; i++){
+            for (int j = 0; j < board.board[i].length; j++) {
+                if(board.board[i][j] != null) {
+                    Figure f = board.board[i][j];
+                    if (board.board[i][j] != board.board[f.getRow()][f.getColumn()]) {
+                        board.board[f.getRow()][f.getColumn()] = f;
+                        board.board[i][j] = null;
+                    }
+                }
+            }
+        }
+   }
 
-
+    public void printBoard(){
+        for(int i=0; i < board.board.length; i++){
+            for (int j = 0; j < board.board[i].length; j++) {
+                if(board.board[i][j] != null) {
+                    Figure f = board.board[i][j];
+                    System.out.print("[" + f.getClass().getName() + " color: "+ f.getColor() + " ]" );
+                }else {
+                    System.out.print("[]");
+                }
+            }
+            System.out.println();
+        }
+    }
 }

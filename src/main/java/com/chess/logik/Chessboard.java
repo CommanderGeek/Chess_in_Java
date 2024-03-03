@@ -11,8 +11,13 @@ public class Chessboard {
     }
 
     public Figure getFigure(int row, int column){
-        return board[row][column];
+        if (row >= 0 && row < board.length && column >= 0 && column < board[row].length) {
+            return board[row][column];
+        } else {
+            return null;
+        }
     }
+
 
     public Figure[][] getBoard() {
         return board;

@@ -1,7 +1,9 @@
 package com.gui.chess_in_java;
 
+import com.chess.logik.Figure;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Rectangle;
@@ -11,7 +13,8 @@ import java.io.InputStream;
 public class Piece {
 
 
-    public Piece(int size, int startPositionX, int startPositionY, String url) {
+
+    public Piece(int size, int startPositionX, int startPositionY, String url, Figure figure) {
         this.startPositionX = startPositionX;
         this.startPositionY = startPositionY;
         //rectangle = new Rectangle(startPositionX, startPositionY, size, size);
@@ -20,8 +23,11 @@ public class Piece {
         assert imgStream != null;
         Image im = new Image(imgStream);
         img = new ImageView(im);
-        img.setX(startPositionX);
-        img.setY(startPositionY);
+        borderPane = new BorderPane();
+        borderPane.setCenter(img);
+        borderPane.setLayoutX(startPositionX);
+        borderPane.setLayoutY(startPositionY);
+        this.figure = figure;
     }
 
     private int startPositionX;
@@ -29,6 +35,16 @@ public class Piece {
 
     private ImageView img;
 
+    private BorderPane borderPane;
+    private Figure figure;
+
+    public BorderPane getBorderPane() {
+        return borderPane;
+    }
+
+    public void setBorderPane(BorderPane borderPane) {
+        this.borderPane = borderPane;
+    }
 
     public int getStartPositionX() {
         return startPositionX;
@@ -53,4 +69,9 @@ public class Piece {
     public void setImg(ImageView img) {
         this.img = img;
     }
+
+    public Figure getFigure() {
+        return figure;
+    }
+
 }
