@@ -11,6 +11,8 @@ public abstract class Figure {
         this.color = color;
     }
 
+
+
     public char getColor() {
         return color;
     }
@@ -18,8 +20,6 @@ public abstract class Figure {
     public void setColor(char color) {
         this.color = color;
     }
-
-
 
 
     public int getRow() {
