@@ -1,5 +1,6 @@
 package com.gui.chess_in_java;
 
+import com.chess.logik.Gamehandler;
 import javafx.scene.Node;
 import javafx.scene.layout.AnchorPane;
 
@@ -7,9 +8,10 @@ public class DraggableMakerGrid extends GridBase {
 
     private double mouseAnchorX;
     private double mouseAnchorY;
-
-    public DraggableMakerGrid(double planeWidth, double planeHeight, int gridSize, AnchorPane anchorPane) {
+    private Gamehandler gamehandler;
+    public DraggableMakerGrid(double planeWidth, double planeHeight, int gridSize, AnchorPane anchorPane, Gamehandler gamehandler) {
         super(planeWidth, planeHeight, gridSize, anchorPane);
+        this.gamehandler = gamehandler;
     }
 
     public void makeDraggable(Node node){
@@ -24,6 +26,7 @@ public class DraggableMakerGrid extends GridBase {
             node.setLayoutY(y);
         });
     }
+
 
     public void makeDraggable(Piece piece){
         Node node = piece.getImg();
