@@ -33,9 +33,6 @@ public class ChessController implements Initializable {
 
         initializeWhitePieces();
         initializeBlackPieces();
-
-
-        //draggableMaker.makeDraggable(piece.getRectangle());
     }
 
     public void initializeWhitePieces(){
@@ -56,22 +53,22 @@ public class ChessController implements Initializable {
         Piece whitePawn7= new Piece(gridSize, 384, 384, "/com/gui/chess_in_java/images/white_pawn.png", gamehandler.getBoard().getFigure(6,6));
         Piece whitePawn8= new Piece(gridSize, 448, 384, "/com/gui/chess_in_java/images/white_pawn.png", gamehandler.getBoard().getFigure(6,7));
 
-        anchorPane.getChildren().add(whiteRook1.getBorderPane());
-        anchorPane.getChildren().add(whiteKnight1.getBorderPane());
-        anchorPane.getChildren().add(whiteBishop1.getBorderPane());
-        anchorPane.getChildren().add(whiteKing.getBorderPane());
-        anchorPane.getChildren().add(whiteQueen.getBorderPane());
-        anchorPane.getChildren().add(whiteBishop2.getBorderPane());
-        anchorPane.getChildren().add(whiteKnight2.getBorderPane());
-        anchorPane.getChildren().add(whiteRook2.getBorderPane());
-        anchorPane.getChildren().add(whitePawn1.getBorderPane());
-        anchorPane.getChildren().add(whitePawn2.getBorderPane());
-        anchorPane.getChildren().add(whitePawn3.getBorderPane());
-        anchorPane.getChildren().add(whitePawn4.getBorderPane());
-        anchorPane.getChildren().add(whitePawn5.getBorderPane());
-        anchorPane.getChildren().add(whitePawn6.getBorderPane());
-        anchorPane.getChildren().add(whitePawn7.getBorderPane());
-        anchorPane.getChildren().add(whitePawn8.getBorderPane());
+        anchorPane.getChildren().add(whiteRook1.getImg());
+        anchorPane.getChildren().add(whiteKnight1.getImg());
+        anchorPane.getChildren().add(whiteBishop1.getImg());
+        anchorPane.getChildren().add(whiteKing.getImg());
+        anchorPane.getChildren().add(whiteQueen.getImg());
+        anchorPane.getChildren().add(whiteBishop2.getImg());
+        anchorPane.getChildren().add(whiteKnight2.getImg());
+        anchorPane.getChildren().add(whiteRook2.getImg());
+        anchorPane.getChildren().add(whitePawn1.getImg());
+        anchorPane.getChildren().add(whitePawn2.getImg());
+        anchorPane.getChildren().add(whitePawn3.getImg());
+        anchorPane.getChildren().add(whitePawn4.getImg());
+        anchorPane.getChildren().add(whitePawn5.getImg());
+        anchorPane.getChildren().add(whitePawn6.getImg());
+        anchorPane.getChildren().add(whitePawn7.getImg());
+        anchorPane.getChildren().add(whitePawn8.getImg());
         draggableMakerGrid.makeDraggable(whiteRook1);
         draggableMakerGrid.makeDraggable(whiteKnight1);
         draggableMakerGrid.makeDraggable(whiteBishop1);
@@ -108,22 +105,22 @@ public class ChessController implements Initializable {
         Piece blackPawn7= new Piece(gridSize, 384, 64, "/com/gui/chess_in_java/images/black_pawn.png", gamehandler.getBoard().getFigure(1,6));
         Piece blackPawn8= new Piece(gridSize, 448, 64, "/com/gui/chess_in_java/images/black_pawn.png", gamehandler.getBoard().getFigure(1,7));
 
-        anchorPane.getChildren().add(blackRook1.getBorderPane());
-        anchorPane.getChildren().add(blackKnight1.getBorderPane());
-        anchorPane.getChildren().add(blackBishop1.getBorderPane());
-        anchorPane.getChildren().add(blackKing.getBorderPane());
-        anchorPane.getChildren().add(blackQueen.getBorderPane());
-        anchorPane.getChildren().add(blackBishop2.getBorderPane());
-        anchorPane.getChildren().add(blackKnight2.getBorderPane());
-        anchorPane.getChildren().add(blackRook2.getBorderPane());
-        anchorPane.getChildren().add(blackPawn1.getBorderPane());
-        anchorPane.getChildren().add(blackPawn2.getBorderPane());
-        anchorPane.getChildren().add(blackPawn3.getBorderPane());
-        anchorPane.getChildren().add(blackPawn4.getBorderPane());
-        anchorPane.getChildren().add(blackPawn5.getBorderPane());
-        anchorPane.getChildren().add(blackPawn6.getBorderPane());
-        anchorPane.getChildren().add(blackPawn7.getBorderPane());
-        anchorPane.getChildren().add(blackPawn8.getBorderPane());
+        anchorPane.getChildren().add(blackRook1.getImg());
+        anchorPane.getChildren().add(blackKnight1.getImg());
+        anchorPane.getChildren().add(blackBishop1.getImg());
+        anchorPane.getChildren().add(blackKing.getImg());
+        anchorPane.getChildren().add(blackQueen.getImg());
+        anchorPane.getChildren().add(blackBishop2.getImg());
+        anchorPane.getChildren().add(blackKnight2.getImg());
+        anchorPane.getChildren().add(blackRook2.getImg());
+        anchorPane.getChildren().add(blackPawn1.getImg());
+        anchorPane.getChildren().add(blackPawn2.getImg());
+        anchorPane.getChildren().add(blackPawn3.getImg());
+        anchorPane.getChildren().add(blackPawn4.getImg());
+        anchorPane.getChildren().add(blackPawn5.getImg());
+        anchorPane.getChildren().add(blackPawn6.getImg());
+        anchorPane.getChildren().add(blackPawn7.getImg());
+        anchorPane.getChildren().add(blackPawn8.getImg());
         draggableMakerGrid.makeDraggable(blackRook1);
         draggableMakerGrid.makeDraggable(blackKnight1);
         draggableMakerGrid.makeDraggable(blackBishop1);

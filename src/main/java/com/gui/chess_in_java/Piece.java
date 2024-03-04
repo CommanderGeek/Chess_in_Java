@@ -23,10 +23,8 @@ public class Piece {
         assert imgStream != null;
         Image im = new Image(imgStream);
         img = new ImageView(im);
-        borderPane = new BorderPane();
-        borderPane.setCenter(img);
-        borderPane.setLayoutX(startPositionX);
-        borderPane.setLayoutY(startPositionY);
+        img.setY(startPositionY);
+        img.setX(startPositionX);
         this.figure = figure;
     }
 
@@ -38,13 +36,9 @@ public class Piece {
     private BorderPane borderPane;
     private Figure figure;
 
-    public BorderPane getBorderPane() {
-        return borderPane;
-    }
 
-    public void setBorderPane(BorderPane borderPane) {
-        this.borderPane = borderPane;
-    }
+
+
 
     public int getStartPositionX() {
         return startPositionX;
